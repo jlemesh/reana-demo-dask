@@ -1,0 +1,11 @@
+inputs:
+  files:
+    - dask_demo.py
+workflow:
+  type: serial
+  specification:
+    steps:
+      - name: mystep
+        environment: 'ghcr.io/dask/dask:2023.1.0'
+        commands:
+        - DASK_SCHEDULER_URI=tcp://simple-scheduler.default.svc.cluster.local:8786 python dask_demo.py
