@@ -1,7 +1,7 @@
 apiVersion: kubernetes.dask.org/v1
 kind: DaskCluster
 metadata:
-  name: simple
+  name: dask
   labels:
     reana-wf: reana-wf-12345
 spec:
@@ -60,7 +60,7 @@ spec:
     service:
       type: NodePort
       selector:
-        dask.org/cluster-name: simple
+        dask.org/cluster-name: dask
         dask.org/component: scheduler
       ports:
       - name: tcp-comm

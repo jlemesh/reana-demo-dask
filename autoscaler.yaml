@@ -3,6 +3,6 @@ kind: DaskAutoscaler
 metadata:
   name: demo-autoscaler
 spec:
-  cluster: "simple"
+  cluster: "dask"
   minimum: 0
   maximum: 10
